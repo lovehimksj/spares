@@ -1,0 +1,85 @@
+page-home {
+    .bar.bar-profile {
+        background: #3c4673;
+        height: 170px;
+    }
+    .content {
+        background: white !important;
+    }
+    .profile {
+        background: #3c4673;
+        padding: 16px 8px;
+        float: left;
+        height: 125px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .bar .profile {
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 0;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    .profile .name {
+        color: #FFFFFF;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        justify-content: center;
+        line-height: 1.2em !important;
+        font-weight: 600;
+        float: right;
+        width: calc(100% - 70px);
+
+    }
+    .side-nav-item {
+        .item-inner {
+            border-bottom: none;
+        }
+    }
+    .profile-picture {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        display: -webkit-box;
+        /* display: -webkit-flex; */
+        display: -ms-flexbox;
+        /* display: flex; */
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        font-size: 16px;
+        color: #3c4673;
+        background: white;
+        font-weight: 700;
+        float: left;
+    }
+
+    .menu .has-header {
+        top: 169px;
+    }
+    .logout {
+        position: absolute;
+        bottom: 0;
+        p {
+            float: right;
+        }
+    }
+    /*.scroll-content {
+        margin-top: 100px !important;
+    }*/
+}

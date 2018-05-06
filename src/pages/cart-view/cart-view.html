@@ -1,0 +1,66 @@
+<!--
+  Generated template for the CartViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>Review Cart</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card *ngFor="let item of itemList">
+        <ion-item>
+            <ion-avatar item-start>
+                <img [src]="'http://sparesdekho.com/admin/product_images/' + item.image">
+            </ion-avatar>
+            <h2 (click)="goToProductPage(item)">{{item.product_name}}</h2>
+            <p>
+                <ion-row>
+                    <ion-col center text-center>
+                        <!--<button ion-button icon-left clear small>-->
+                        <!--<ion-icon name="thumbs-up"></ion-icon>-->
+                        <div>Qty : {{item.quantity}}</div>
+                        <!--</button>-->
+                    </ion-col>
+                    <ion-col center text-center>
+                        <!--<button ion-button icon-left clear small>-->
+                        <!--<ion-icon name="text"></ion-icon>-->
+                        <div>Price : {{item.price > 0 ? item.price : ''}}</div>
+                        <!--</button>-->
+                    </ion-col>
+                    <ion-col center text-center>
+                        <div>Total : {{item.totalPrice}}</div>
+                    </ion-col>
+                </ion-row>
+            </p>
+        </ion-item>
+        <ion-row>
+            <ion-col left text-center>
+                <button left ion-button [clear]="true" [small]="true" (click)="decreaseItem(item)">
+                    <ion-icon name="remove"></ion-icon>
+                </button>
+                <button ion-button [clear]="true" [small]="true" [disabled]="true">{{item.quantity}}</button>
+                <button ion-button [clear]="true" [small]="true" (click)="increaseItem(item)">
+                    <ion-icon name="add"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col center text-center>
+                <button ion-button [clear]="true" [small]="true" [disabled]="true">Remove </button>
+                <button ion-button [clear]="true" [small]="true" (click)="removeItem(item)">
+                    <ion-icon ios="ios-close" md="md-close"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+</ion-content>
+<ion-footer no-border="">
+    <ion-buttons class="footer-buttons">
+        <button float-left="" [color]="'white'" [clear]="true" ion-button="" (click)="goToDashboard()">Continue Shopping</button>
+        <button float-right="" [color]="'orange'" [clear]="true" ion-button="" (click)="goToCheckOut()">Checkout</button>
+    </ion-buttons>
+</ion-footer>

@@ -1,0 +1,28 @@
+page-cart-view {
+    .toolbar-background {
+        background: #515151;
+    }
+    .toolbar-title {
+        color: #fff;
+    }
+    .back-button {
+        color: #ffffff;
+    }
+    .footer-buttons {
+        margin: 0;
+    }
+    .footer-buttons button {
+        margin: 0;
+        width: 50%;
+        border-radius: 0;
+        height: 36px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .footer-buttons button:first-child {
+        background: #b2b2b2;
+    }
+    .footer-buttons button:last-child {
+        background: #515151;
+    }
+}

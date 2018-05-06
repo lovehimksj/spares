@@ -1,0 +1,21 @@
+export interface Product {
+    id: number,
+    cat_id: number,
+    subcat_id: number,
+    quantity: number,
+    totalPrice: number,
+    product_name: string,
+    image_mul: string,
+    image: string,
+    image2_mul: string,
+    image2: string,
+    image3_mul: string,
+    image3: string,
+    image4_mul: string,
+    image4: string,
+    "price": string,
+    "description": string,
+    "add_date": number,
+    "mod_date": number,
+    "status": string
+}

@@ -1,0 +1,92 @@
+page-profile {
+    .toolbar-background {
+        background: #515151;
+    }
+    .toolbar-title {
+        color: #fff;
+    }
+    .back-button {
+        color: #ffffff;
+    }
+    .bar-button {
+        color: #ffffff;
+    }
+    .toolbar-title {
+        font-size: 16px;
+    }
+    .user-icon {
+        margin: 10px auto;
+        width: 70px;
+        text-align: center;
+        height: 70px;
+        background: #3c4673;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .profile-button {
+        width: 100%;
+        text-align: center;
+        float: left;
+        margin: 10px 0;
+        font-size: 14px;
+        font-weight: 700;
+        color: #3c4673;
+    }
+    .logo-row {
+        background: #f5f5f5;
+    }
+    .item {
+        padding-left: 0;
+    }
+    .update-profile {
+        position: fixed;
+        bottom: 0;
+        height: 44px;
+        background: #3c4673;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+        left: 0;
+        right: 0;
+    }
+    .profile-row {
+        margin-bottom: 54px;
+    }
+    a[disabled], button[disabled], [ion-button][disabled] {
+        opacity: 1;
+    }
+
+    .toggle.toggle-checked .toggle-inner {
+        background-color: #3c4673;
+    }
+    .toggle .toggle-inner {
+        background-color: #dedede;
+    }
+    .toggle-md.toggle-checked .toggle-icon {
+        background-color: rgba(60, 70, 115, 0.5);
+    }
+    .item.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+    .item.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+        border-bottom-color: #dedede;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .item.item-input.input-has-focus .item-inner {
+        border-bottom-color: #6BCCE4;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .item-input-has-focus .label[floating],
+    .input-has-focus .label[floating],
+    .item-input-has-value .label[floating],
+    .input-has-value .label[floating] {
+        color: #6bcce4;
+    }
+}

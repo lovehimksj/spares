@@ -1,0 +1,93 @@
+page-product {
+    .toolbar-background {
+        background: #515151;
+    }
+    .toolbar-title {
+        color: #fff;
+    }
+    .back-button {
+        color: #ffffff;
+    }
+    .bar-button {
+        color: #ffffff;
+    }
+    .toolbar-title {
+        font-size: 16px;
+    }
+    .product-slides {
+        height: fit-content;
+    }
+    .swiper-slide {
+        line-height: 0;
+    }
+    .product-name {
+        color: #515151;
+        float: left;
+        margin: 16px 0 24px 0;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        width: 100%;
+        text-transform: capitalize;
+    }
+    .swiper-container {
+        flex-direction: column;
+        overflow: visible;
+    }
+    .swiper-pagination {
+        bottom: calc(0px - 64px) !important;
+    }
+    .product-price {
+        color: #EB4D16;
+        float: left;
+        margin: 8px 0 8px 0;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        width: 100%;
+    }
+    .slider-button {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        right: 0;
+    }
+    .product-card {
+        position: relative !important;
+        margin: 8px !important;
+        width: calc(100% - 16px) !important;
+        -webkit-box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 2px 0px rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 2px 0px rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 2px 0px rgba(0, 0, 0, 0.2), 0 0px 1px 0 rgba(0, 0, 0, 0.12);
+    }
+    .footer-buttons {
+        margin: 0;
+    }
+    .footer-buttons button {
+        margin: 0;
+        width: 50%;
+        border-radius: 0;
+        height: 36px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .footer-buttons button:first-child {
+        background: #b2b2b2;
+    }
+    .footer-buttons button:last-child {
+        background: #515151;
+    }
+    .req-input {
+        border: 1px solid grey;
+    }
+    .badge {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        z-index: 99 !important;
+        font-size: 10px !important;
+        padding: 3px !important;
+        height: 15px !important;
+        width: 15px !important;
+    }
+}

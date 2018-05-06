@@ -1,0 +1,146 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button menuToggle>
+                <ion-icon name="menu" class="home_menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title><img class="center-log" src="assets/imgs/brand_logo.png" alt=""></ion-title>
+        <!--<ion-buttons start>
+            <button ion-button icon-only>
+                <ion-icon name="cart"></ion-icon>
+            </button>
+        </ion-buttons>
+
+        <ion-buttons end>
+            <button ion-button icon-only>
+                <ion-icon name="search"></ion-icon>
+            </button>
+        </ion-buttons>-->
+    </ion-navbar>
+    <ion-searchbar #searchbar placeholder="Find Parking Nearby Your Place"
+                   type="text"
+                   (ionInput)="getInput($event)"
+                   [showCancelButton]="true"
+    ></ion-searchbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-slides class="image-slider" [pager]="true">
+        <ion-slide>
+            <img src="assets/products/banner2.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/products/banner3.jpg" alt="">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/products/banner.jpg" alt="">
+        </ion-slide>
+    </ion-slides>
+
+    <!--<ion-card col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+        <ion-card-header>
+            Shipping & Return
+        </ion-card-header>
+        <ion-card-content>
+            <span>Shipping all order as per global rate</span>
+            &lt;!&ndash; Add card content here! &ndash;&gt;
+        </ion-card-content>
+    </ion-card>
+    <ion-card col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+        <ion-card-header>
+            Money Back Guarantee
+        </ion-card-header>
+        <ion-card-content>
+            <span>Money back guarantee</span>
+            &lt;!&ndash; Add card content here! &ndash;&gt;
+        </ion-card-content>
+    </ion-card>
+    <ion-card col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+        <ion-card-header>
+            Online Support 24X7
+        </ion-card-header>
+        <ion-card-content>
+            <span>Always support full time 24/7</span>
+            &lt;!&ndash; Add card content here! &ndash;&gt;
+        </ion-card-content>
+    </ion-card>-->
+
+    <ion-grid>
+        <ion-row text-center>
+            <ion-col class="usp_point_card" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                <h4>Shipping & <br> Return</h4>
+                <p>Shipping all order as per global rate</p>
+            </ion-col>
+            <ion-col class="usp_point_card" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                <h4>Money back guarantee</h4>
+                <p>Money back guarantee</p>
+            </ion-col>
+            <ion-col class="usp_point_card" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+                <h4>Online Support 24X7</h4>
+                <p>Always support full time 24/7</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+        <ion-row text-center>
+            <ion-col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12><img src="assets/products/banner01.jpg" alt="">
+            </ion-col>
+            <ion-col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12><img src="assets/products/banner03.jpg" alt="">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12>
+                <span class="dashboard_page_product_title">
+                    Popular Products
+                </span>
+            </ion-col>
+            <ion-col col-12>
+                <ion-scroll scrollX="true">
+                    <ion-card *ngFor="let i of popularProduct" class="product-card">
+                        <ion-item (click)="goToProductPage(i)">
+                            <img
+                                [src]="'http://sparesdekho.com/admin/product_images/' + i.image"
+                                alt="">
+                            <span class="dashboard_product_price">{{i.product_name}}</span>
+                            <span class="dashboard_product_price">Rs. {{i.price}}</span>
+                            <button class="dashboard_cart_button">Ask Price</button>
+                        </ion-item>
+                    </ion-card>
+                </ion-scroll>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <span class="dashboard_page_product_title">
+                    Our Products
+                </span>
+            </ion-col>
+            <ion-col col-12>
+                <ion-scroll scrollX="true">
+                    <ion-card *ngFor="let i of ourProduct" class="product-card">
+                        <ion-item (click)="goToProductPage(i)">
+                            <img
+                                [src]="'http://sparesdekho.com/admin/product_images/' + i.image"
+                                alt="">
+                            <span class="dashboard_product_price">{{i.product_name}}</span>
+                            <span class="dashboard_product_price">Rs. {{i.price}}</span>
+                            <button class="dashboard_cart_button">Ask Price</button>
+                        </ion-item>
+                    </ion-card>
+                </ion-scroll>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,41 @@
+<!--
+  Generated template for the OrdersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>My Orders</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card *ngFor="let item of itemList">
+        <ion-item>
+            <ion-avatar item-start>
+                <img [src]="'http://sparesdekho.com/admin/product_images/' + item.image">
+            </ion-avatar>
+            <!--<h2>{{item.product_title}}</h2>-->
+            <p>Order Id : {{item.ord_id}} - Order date : {{item.add_date | date:'d/M/yyyy'}}</p>
+        </ion-item>
+        <ion-card-content>
+            <p>{{item.product_title}}</p>
+        </ion-card-content>
+        <ion-row>
+            <ion-col  center text-center>
+                <ion-note>Qty : {{item.qty}}</ion-note>
+            </ion-col>
+            <ion-col  center text-center>
+                <ion-note>Price : {{item.price}}</ion-note>
+            </ion-col>
+            <ion-col center text-center>
+                <ion-note>Shipping : {{item.shipping}}</ion-note>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+</ion-content>

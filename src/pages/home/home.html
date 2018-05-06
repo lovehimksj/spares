@@ -1,0 +1,29 @@
+<ion-menu [content]="content">
+    <ion-header class="bar-profile" no-border>
+        <div class="profile" *ngIf="profileName === ''">
+            <span class="profile-picture">N/A</span>
+            <span class="name">
+                <h3>Guest User</h3>
+                <a style="color:white;" menuClose (click)="goToLoginRegister()">Login/Register</a>
+            </span>
+        </div>
+        <div class="profile" *ngIf="profileName !== ''">
+            <span class="profile-picture">{{profileName}}</span>
+            <span class="name">
+                <h3>{{userInfo.first_name}} {{userInfo.last_name}}</h3>
+                <a style="color:white;" menuClose (click)="goToProfile()">{{userInfo.email}}</a>
+            </span>
+        </div>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-item class="side-nav-item" ion-item menuClose (click)="goToHome()">
+                Home
+            </ion-item>
+            <ion-item class="side-nav-item" ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+                {{ p.value }}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav id="nav" #content [root]="rootPage" [swipeBackEnabled]="true"></ion-nav>
